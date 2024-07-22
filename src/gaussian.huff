@@ -1,0 +1,103 @@
+#define macro CALCULATE_P() = takes(0) returns(0) {
+  0x24 calldataload
+  0x04 calldataload
+  sub               
+
+  0xb504f333f9de6484597d89b3
+  mul
+
+  0x44 calldataload 
+  swap1
+  sdiv    
+
+  dup1   
+  
+  0x53f03f07e018b5e437ebc00000   
+  sub                          
+
+  dup2 mul 0x60 sar                       
+  0x9426c0da0db0196f4c940000000 
+  swap1 sub                
+
+  dup2 mul 0x60 sar                         
+  0x87ce3464514f9f2a96a900000000  
+  add                             
+
+  dup2 mul 0x60 sar                   
+  0x4aa878b19f5e1da7849da00000000 
+  swap1 sub                           
+
+  dup2 mul 0x60 sar  
+  0x19c6271833e59e7293644000000000 
+  add       
+  
+  dup2 mul 0x60 sar                        
+  0x57250cb5cfe1a6b98e584000000000 
+  swap1 sub  
+      
+  dup2 mul 0x60 sar                        
+  0x986c8bb677c010a3ace48000000000
+  add          
+
+  dup2 mul 0x60 sar                        
+  0x13d63a9a5da47428a1670000000000
+  swap1 sub  
+      
+  dup2 mul 0x60 sar                 
+  0xf4d1deada9d68c8918f10000000000 
+  swap1 sub                     
+
+  dup2 mul 0x60 sar                     
+  0x379fa110f89b0b537e2e20000000000
+  swap1 sub  
+
+  dup2 mul 0x60 sar                        
+  0x14001c78d75852359284580000000000 
+  add                             
+
+  dup2 mul 0x60 sar
+  0x220176c16cc7b9b6d30dd00000000000 
+  swap1 sub  
+
+  dup2 mul  
+  0x14e66541b58fa8fa0dc2600000000000000000000000000000000000
+  add
+
+  swap1
+  dup1
+  0x7bfa42098491b8000000000
+
+  // Additional adjustments to the result
+  mul 0x60 sar
+  0x18e69e267814200000000000
+  swap1 sub  
+
+  dup2 mul 0x60 sar
+  0x64ead0991554bc0000000000
+  add
+
+  dup2 mul 0x60 sar
+  0x7faa085414fe440000000000
+  swap1 sub  
+
+  dup2 mul 0x60 sar
+  0x1000000000000000000000000
+  add
+
+  swap1                          
+  pop                           
+
+  swap1
+  sdiv
+
+  0x18189603334553000
+  swap1
+  div
+
+  0x1bc16d674ec80000
+  sub
+}
+
+#define macro MAIN() = takes(0) returns(0) {
+  CALCULATE_P()
+}
